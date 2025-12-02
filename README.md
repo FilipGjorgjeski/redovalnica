@@ -1,6 +1,6 @@
 # Redovalnica
 
-CLI aplikacija in Go paket za upravljanje ocen.
+CLI za upravljanje ocen.
 
 ## Namestitev
 
@@ -9,8 +9,6 @@ go get github.com/FilipGjorgjeski/redovalnica
 ```
 
 ## Uporaba CLI
-
-Globalna stikala morajo biti podana pred podukazom.
 
 ```bash
 # Gradnja
@@ -24,14 +22,14 @@ go build -o bin/redovalnica ./cmd/redovalnica
 # Izpis vseh ocen
 ./bin/redovalnica izpisi
 
-# Koncni uspeh (globalni flagi pred podukazom)
+# Koncni uspeh
 ./bin/redovalnica --stOcen 2 uspeh
 ```
 
 ### Stikala
-- `--stOcen` (globalno): najmanjše število ocen za pozitivno oceno (privzeto 3)
-- `--minOcena` (globalno): najmanjša možna ocena (privzeto 1)
-- `--maxOcena` (globalno): največja možna ocena (privzeto 5)
+- `--stOcen`: najmanjše število ocen za pozitivno oceno
+- `--minOcena`: najmanjša možna ocena
+- `--maxOcena`: največja možna ocena
 
 ## Paket `redovalnica`
 
@@ -39,9 +37,3 @@ Izvožene funkcije:
 - `DodajOceno(grade, minOcena, maxOcena int) bool`
 - `IzpisVsehOcen() []int`
 - `IzpisiKoncniUspeh(stOcen int) string`
-
-Skrita funkcija:
-- `povprecje([]int) float64`
-
-## Licenca
-MIT
